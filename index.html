@@ -1,6 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <title>World Clock</title>
+  </head>
+  <body>  
+       <section class="sections add-time-zone">
+            <div class="container">
+                <h2 class="text-uppercase font-weight-bold">Add Time Zone</h2>
+                <div class="line"></div>
+
+                <form class="form-inline mx-auto form-margin">
+                    <div class="form-group ">
+                    <h5>Anywhere in the World</h5>
+                    </div>
+                    <div class="form-group mx-sm-3 mb-2">
+                    <input type="text" class="form-control" id="newTimeZone" placeholder="enter a city">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Add <i class="fas fa-plus-circle"></i></button>
+                </form>
+                
+            </div>
+        </section>
+
+
+        <section class="sections my-time-zone">
+            <div class="container">
+                <h2 class="text-uppercase font-weight-bold">My Time Zones</h2>
+                <div class="line"></div>
+
+                <!-- Added City Section -->
+
+                <div class="city-section">
+                    <h4 class="text-uppercase font-weight-bold">Lagos</h4>
+                    <div class="date-time">
+                        <div class="date">
+                            05.07.20 /
+                        </div>
+                        <div class="time">
+                            12:21:55
+                        </div>
+                        <div class="location">
+                            Nigeria/Lagos
+                        </div>
+                    </div>
+
+                    <i class="delete-time far fa-times-circle"></i>
+                </div>
+
+                <div class="city-section">
+                    <h4 class="text-uppercase font-weight-bold">London</h4>
+                    <div class="date-time">
+                        <div class="date">
+                            05.07.20 /
+                        </div>
+                        <div class="time">
+                            11:21:55
+                        </div>
+                        <div class="location">
+                            UK/London
+                        </div>
+                    </div>
+
+                    <i class="delete-time far fa-times-circle"></i>
+                </div>
+                
+                
+            </div>
+        </section>
+
+    <!-- Optional JavaScript -->
+
+    <script src="assets/scripts/index.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+<!-- <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles/styles.css">
@@ -19,4 +106,5 @@
         </section>
     </section>
 </body>
-</html>
+</html> -->
+
