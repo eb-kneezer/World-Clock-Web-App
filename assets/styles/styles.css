@@ -16,9 +16,10 @@ body {
 
 
 .sections {
-    max-width: 900px;
+    width: 90%;
+    max-width: 800px;
     margin: 3rem auto;
-    padding: 3rem;
+    padding: 3rem 1rem;
     text-align: center;
     background-color: #fff;
     color: #4b134f;
@@ -50,7 +51,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 700px;
+    width: 70%;
 }
 
 .date-time {
@@ -68,24 +69,47 @@ body {
     font-size: 3rem;
 }
 
-
 .delete-time {
     position: absolute;
     cursor: pointer;
     top: 1rem;
     right: 1rem;
-* {
-    box-sizing: border-box;
+
+
 }
 
-html {
-    height: 100%;
+@media (max-width: 850px) {
+    .city-section {
+        flex-direction: column;
+    }
+
+    .date-time {
+        flex-direction: column;
+        margin-top: 1.5rem;
+    }
+
+    .time {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .date,
+    .location {
+        padding: 0;
+        align-self: center;
+    }
 }
 
-body {
-    padding: 0 5rem;
-    height: 100%;
-}
+@media (max-width: 790px) {
+    .column {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .column h5 {
+        margin-bottom: 1rem;
+    }
 
 #main-app {
     display: grid;
@@ -167,5 +191,6 @@ i {
 p {
     font-size: 20px;
     float: inherit;
+
 
 }
