@@ -75,6 +75,7 @@ body {
     top: 1rem;
     right: 1rem;
 
+
 }
 
 @media (max-width: 850px) {
@@ -109,4 +110,87 @@ body {
     .column h5 {
         margin-bottom: 1rem;
     }
+
+#main-app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-template-areas: 'add-timezones my-timezones';
+    height: 80%;
+}
+
+
+/* section {
+} */
+
+#add-timezones {
+    background-color: blue;
+    grid-area: add-timezones;
+    width: 100%;
+}
+
+#my-timezones {
+    background-color: white;
+    grid-area: my-timezones;
+    width: 100%;
+    grid-area: auto;
+    border: 5px solid plum;
+    position: relative;
+    border-radius: 15px 30px 15px 30px;
+    align-items: stretch;
+    text-align: center;
+    /* height: 80%; */
+
+}
+
+#my-timezones header {
+    background-color: white;
+    margin: 2px auto;
+    text-align: center;
+    padding: 6px 6px;
+    border-radius: 15px 30px 15px 30px;
+    font-size: large;
+}
+
+#Nigeria {
+    background-color: rgb(109, 45, 109);
+    font-size: 25px;
+}
+
+#New-Delhi {
+    background-color: purple;
+    font-size: 25px;
+}
+
+#San-Francisco {
+    background-color: blueviolet;
+    font-size: 25px;
+}
+
+#New-York {
+    background-color: palevioletred;
+    font-size: 25px;
+}
+
+#London {
+    background-color: peru;
+    font-size: 25px;
+}
+
+i {
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+#time {
+    font-size: 30px;
+    float: right;
+}
+
+p {
+    font-size: 20px;
+    float: inherit;
+
+
 }
