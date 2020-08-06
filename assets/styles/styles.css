@@ -5,6 +5,7 @@ body {
 }
 
 .btn {
+    display: inline-block;
     background-color: #4b134f;
     border: none;
     border-radius: 7.5px;
