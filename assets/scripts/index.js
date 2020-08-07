@@ -7,7 +7,7 @@ newTime,
 displayTime, 
 newCity;
 
-
+let counter = -1
 newCity = [];
 
 // Recieve Location From User, push to newCity array, and match with
@@ -18,15 +18,22 @@ document.querySelector('#send').addEventListener('click', () => {
     time_zones.forEach(zone => {
         if (similar(zone.city, newLocation) >= 60) {
             newCity.push(zone);
-            
+            counter += 1;
             // getTime();
             displayContent();
         }
     });
 });
 
-// Generate current time.
 
+// add new myTimeZone section
+function displayContent() {
+    
+    document.querySelector('.my-time-zone .container').innerHTML += '<div class="city-section"><h4 class="text-uppercase font-weight-bold"></h4><div class="date-time"><div class="time"></div><div class="location"></div></div><i class="delete-time far fa-times-circle" id="counter'+counter+'"></i></div>';
+    getTime();
+}
+
+// Generate current time.
 function getTime() {
     let currentTime = new Date();
     let hour = currentTime.getUTCHours();
@@ -42,16 +49,10 @@ function getTime() {
         document.querySelectorAll('.location')[i].textContent = newCity[i].country;   
     }
     setTimeout(getTime,1000);
-
-    
 }
 
-// add new myTimeZone section
-function displayContent() {
-    
-    document.querySelector('.my-time-zone .container').innerHTML += '<div class="city-section"><h4 class="text-uppercase font-weight-bold"></h4><div class="date-time"><div class="time"></div><div class="location"></div></div><i class="delete-time far fa-times-circle"></i></div>';
-    getTime();
-}
+// remove timeZone section
+
 
 
 function checkTime(i) {
