@@ -58,7 +58,7 @@ body {
     display: flex;
     padding-bottom: .5rem;
 }
-.date,
+/* .date, */
 .location {
     align-self: flex-end;
     padding-bottom: 1.3rem;
@@ -92,7 +92,7 @@ body {
         padding-top: 0;
     }
 
-    .date,
+    /* .date, */
     .location {
         padding: 0;
         align-self: center;

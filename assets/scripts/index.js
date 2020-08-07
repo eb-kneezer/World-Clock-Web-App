@@ -39,7 +39,7 @@ function getTime() {
 // add new myTimeZone section
 function displayContent() {
     
-    document.querySelector('.my-time-zone .container').innerHTML += '<div class="city-section"><h4 class="text-uppercase font-weight-bold"></h4><div class="date-time"><div class="date">05.07.20 /</div><div class="time"></div><div class="location"></div></div><i class="delete-time far fa-times-circle"></i></div>';
+    document.querySelector('.my-time-zone .container').innerHTML += '<div class="city-section"><h4 class="text-uppercase font-weight-bold"></h4><div class="date-time"><div class="time"></div><div class="location"></div></div><i class="delete-time far fa-times-circle"></i></div>';
     getTime();
 }
 
