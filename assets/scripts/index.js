@@ -52,7 +52,11 @@ function getTime() {
 }
 
 // remove timeZone section
-
+function displayContent() {
+    
+    document.querySelector('.my-time-zone .container').innerHTML += '<div class="city-section"><h4 class="text-uppercase font-weight-bold"></h4><div class="date-time"><div class="time"></div><div class="location"></div></div><i class="delete-time far fa-times-circle" id="counter'+counter+'"></i></div>';
+    getTime();
+}
 
 
 function checkTime(i) {
