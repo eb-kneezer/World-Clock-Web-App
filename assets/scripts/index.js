@@ -10,13 +10,13 @@ newCity;
 
 newCity = [];
 
-// Recieve Location From User and match with
-// objects in time_zones array
+// Recieve Location From User, push to newCity array, and match with
+// objects in time_zones array in time-zones.js
 document.querySelector('#send').addEventListener('click', () => {
     newLocation = document.querySelector('#newTimeZone').value;
 
     time_zones.forEach(zone => {
-        if (newLocation.toLowerCase() === zone.city.toLowerCase()) {
+        if (similar(zone.city, newLocation) >= 60) {
             newCity.push(zone);
             
             // getTime();
@@ -25,7 +25,7 @@ document.querySelector('#send').addEventListener('click', () => {
     });
 });
 
-// Get Time Function...dynamically
+// Generate current time.
 
 function getTime() {
     let currentTime = new Date();
@@ -61,8 +61,20 @@ function checkTime(i) {
     return i;
 }
 
-// function dynamicTime() {
-//     document.querySelector('.city-section h4').textContent = newCity.city;
-//     document.querySelector('.time').textContent = hour + newCity.utc + ':' + minute + ':' + second;
-//     document.querySelector('.location').textContent = newCity.country;
-// }
+function similar(a,b) {
+    a = a.toLowerCase();
+    b = b.toLowerCase();
+    var lengthA = a.length;
+    var lengthB = b.length;
+    var equivalency = 0;
+    var minLength = (a.length > b.length) ? b.length : a.length;    
+    var maxLength = (a.length < b.length) ? b.length : a.length;    
+    for(var i = 0; i < minLength; i++) {
+        if(a[i] == b[i]) {
+            equivalency++;
+        }
+    }
+  
+    var weight = equivalency / maxLength;
+    return (weight * 100);
+}

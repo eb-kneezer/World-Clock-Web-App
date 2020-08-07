@@ -1,13 +1,13 @@
 let time_zones = [
     {
       "id": 1,
-      "city": "Tokyo–Yokohama",
+      "city": "Tokyo",
       "country": "Japan",
       "utc": 9
     },
     {
       "id": 2,
-      "city": "Jakarta (Jabodetabek)",
+      "city": "Jakarta",
       "country": "Indonesia",
       "utc": 9
     },
@@ -19,13 +19,13 @@ let time_zones = [
     },
     {
       "id": 4,
-      "city": "Manila (Metro Manila)",
+      "city": "Manila",
       "country": "Philippines",
       "utc": 8
     },
     {
       "id": 5,
-      "city": "Seoul–Gyeonggi–Incheon (Sudogwon)",
+      "city": "Seoul",
       "country": "South Korea",
       "utc": 9
     },
@@ -55,7 +55,7 @@ let time_zones = [
     },
     {
       "id": 10,
-      "city": "Guangzhou–Foshan (Guangfo)",
+      "city": "Guangzhou",
       "country": "China",
       "utc": 8
     },
@@ -67,7 +67,7 @@ let time_zones = [
     },
     {
       "id": 12,
-      "city": "Mexico City (Valley of Mexico)",
+      "city": "Mexico City",
       "country": "Mexico",
       "utc": -5
     },
@@ -79,7 +79,7 @@ let time_zones = [
     },
     {
       "id": 14,
-      "city": "Osaka–Kobe–Kyoto (Keihanshin)",
+      "city": "Osaka",
       "country": "Japan",
       "utc": 9
     },
@@ -97,7 +97,7 @@ let time_zones = [
     },
     {
       "id": 17,
-      "city": "Greater Cairo",
+      "city": "Cairo",
       "country": "Egypt",
       "utc": 2
     },
@@ -223,7 +223,7 @@ let time_zones = [
     },
     {
       "id": 38,
-      "city": "Ho Chi Minh City (Saigon)",
+      "city": "Ho Chi Minh City",
       "country": "Vietnam",
       "utc": 7
     },
@@ -247,7 +247,7 @@ let time_zones = [
     },
     {
       "id": 42,
-      "city": "Johannesburg–East Rand",
+      "city": "Johannesburg",
       "country": "South Africa",
       "utc": 2
     },
@@ -289,7 +289,7 @@ let time_zones = [
     },
     {
       "id": 49,
-      "city": "Kuala Lumpur (Klang Valley)",
+      "city": "Kuala Lumpur",
       "country": "Malaysia",
       "utc": 8
     },
@@ -301,7 +301,7 @@ let time_zones = [
     },
     {
       "id": 51,
-      "city": "Essen–Düsseldorf (Ruhr Area)",
+      "city": "Essen–Düsseldorf",
       "country": "Germany",
       "utc": 1
     },
@@ -325,7 +325,7 @@ let time_zones = [
     },
     {
       "id": 55,
-      "city": "Dallas–Fort Worth",
+      "city": "Dallas",
       "country": "United States of America",
       "utc": -5
     },
@@ -355,7 +355,7 @@ let time_zones = [
     },
     {
       "id": 60,
-      "city": "San Francisco–San Jose",
+      "city": "San Francisco",
       "country": "United States of America",
       "utc": -7
     },
@@ -481,7 +481,7 @@ let time_zones = [
     },
     {
       "id": 80,
-      "city": "Yangon (Rangoon)",
+      "city": "Yangon",
       "country": "Myanmar",
       "utc": 6.5
     },
@@ -541,7 +541,7 @@ let time_zones = [
     },
     {
       "id": 91,
-      "city": "Kuwait City",
+      "city": "Kuwait",
       "country": "Kuwait",
       "utc": 3
     },
@@ -697,7 +697,7 @@ let time_zones = [
     },
     {
       "id": 117,
-      "city": "Medellín",
+      "city": "Medellin",
       "country": "Colombia",
       "utc": -5
     },
@@ -847,7 +847,7 @@ let time_zones = [
     },
     {
       "id": 142,
-      "city": "İzmir",
+      "city": "Izmir",
       "country": "Turkey",
       "utc": 3
     },
@@ -865,7 +865,7 @@ let time_zones = [
     },
     {
       "id": 145,
-      "city": "Yaoundé",
+      "city": "Yaounde",
       "country": "Cameroon",
       "utc": 1
     },
