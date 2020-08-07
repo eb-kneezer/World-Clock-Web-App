@@ -1,5 +1,14 @@
+// https://eb-kneezer.github.io/World-Clock-Web-App/
+
 // Declaration of Variables
-let today, newLocation, newTime, displayTime, newCity;
+let today, 
+newLocation, 
+newTime, 
+displayTime, 
+newCity;
+
+
+newCity = [];
 
 // Recieve Location From User and match with
 // objects in time_zones array
@@ -8,7 +17,8 @@ document.querySelector('#send').addEventListener('click', () => {
 
     time_zones.forEach(zone => {
         if (newLocation.toLowerCase() === zone.city.toLowerCase()) {
-            newCity = zone;
+            newCity.push(zone);
+            
             // getTime();
             displayContent();
         }
@@ -26,11 +36,11 @@ function getTime() {
     minute = checkTime(minute);
     second = checkTime(second);
 
-    document.querySelector('.city-section h4').textContent = newCity.city;
-    document.querySelectorAll('.time').forEach(item => {
-        item.textContent = hour + newCity.utc + ':' + minute + ':' + second;
-    });
-    document.querySelector('.location').textContent = newCity.country;
+    for (let i = 0; i < document.querySelectorAll('.city-section').length; i++) {
+        document.querySelectorAll('.time')[i].textContent = hour + newCity[i].utc + ':' + minute + ':' + second;
+        document.querySelectorAll('.city-section h4')[i].textContent = newCity[i].city;
+        document.querySelectorAll('.location')[i].textContent = newCity[i].country;   
+    }
     setTimeout(getTime,1000);
 
     
