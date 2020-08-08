@@ -7,9 +7,14 @@ newTime,
 displayTime, 
 newCity;
 
-let counter = -1
+let counter = -1;
+let availableCity = [];
 newCity = [];
 
+
+time_zones.forEach(zone => {
+  availableCity.push(zone.city);
+})
 // Recieve Location From User, push to newCity array, and match with
 // objects in time_zones array in time-zones.js
 document.querySelector('#send').addEventListener('click', () => {
@@ -29,7 +34,7 @@ document.querySelector('#send').addEventListener('click', () => {
 // add new myTimeZone section
 function displayContent() {
     
-    document.querySelector('.my-time-zone .container').innerHTML += '<div class="city-section"><h4 class="text-uppercase font-weight-bold"></h4><div class="date-time"><div class="time"></div><div class="location"></div></div><i class="delete-time far fa-times-circle" id="counter'+counter+'"></i></div>';
+    document.querySelector('.my-time-zone .container').innerHTML += '<div class="city-section"><h4 class="text-uppercase font-weight-bold"></h4><div class="date-time"><div class="time"></div><div class="location"></div></div><i class="delete-time far fa-times-circle" id="counter"></i></div>';
     getTime();
 }
 
@@ -52,6 +57,8 @@ function getTime() {
 }
 
 // remove timeZone section
+//not yet working
+
 let el = document.querySelector('i');
 if (el) {
   el.addEventListener('click', () => {
@@ -59,8 +66,12 @@ if (el) {
   remov.remove();
 });
 }
+       
 
 
+
+
+//for single digit time, add '0' in front
 function checkTime(i) {
     if (i < 10) {
         i = "0" + i
@@ -68,6 +79,7 @@ function checkTime(i) {
     return i;
 }
 
+//Word compare function
 function similar(a,b) {
     a = a.toLowerCase();
     b = b.toLowerCase();
@@ -85,3 +97,10 @@ function similar(a,b) {
     var weight = equivalency / maxLength;
     return (weight * 100);
 }
+
+//Auto Suggest
+$(function () {
+  $("#newTimeZone").autocomplete({
+    source: availableCity,
+  });
+});
