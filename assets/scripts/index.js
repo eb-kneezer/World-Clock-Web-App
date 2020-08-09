@@ -32,7 +32,13 @@ document.querySelector('#send').addEventListener('click', () => {
 
 // add new myTimeZone section
 function displayContent() {
-    document.querySelector('.my-time-zone .container').innerHTML += '<div class="city-section"><h4 class="text-uppercase font-weight-bold"></h4><div class="date-time"><div class="time"></div><div class="location"></div></div><i class="delete-time far fa-times-circle" id="counter"></i></div>';
+    document.querySelector('.my-time-zone .container').innerHTML += `<div class="city-section" id="${counter}"><h4 class="text-uppercase font-weight-bold"></h4><div class="date-time"><div class="time"></div><div class="location"></div></div><i class="delete-time fa fa-times-circle" id="${counter}"></i></div>`;
+    document.querySelectorAll('.delete-time')
+    .forEach(button => {
+        button.addEventListener('click', ()=>{
+            
+        })
+    })
     getTime();
 }
 
@@ -56,13 +62,12 @@ function getTime() {
 
 // remove timeZone section
 //not yet working
-let el = document.querySelector('i');
-if (el) {
-  el.addEventListener('click', () => {
-  let remov = document.querySelector('.location');
-  remov.remove();
-});
-}
+// let el = document.querySelector('.fa');
+// if (el) {
+//   el.addEventListener('click', () => {
+//   alert('clicked')
+// });
+// }
        
 //for single digit time, add '0' in front
 function checkTime(i) {
