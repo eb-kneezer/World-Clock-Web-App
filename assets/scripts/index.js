@@ -42,7 +42,6 @@ function displayContent() {
             let attr = Number(button.getAttribute('id').split('')[2]);
             newCity.splice(attr, 1);
             deleteCity(attr);
-            console.log(newCity);
             getTime();
         });
     });
@@ -68,7 +67,7 @@ function getTime() {
 }
 
 // remove timeZone section
-//(strangen bugs still exist)
+//(strange bugs still exist)
 function deleteCity(btnId) {
     if(document.querySelectorAll('.city-section')[btnId]){
         document.querySelectorAll('.city-section')[btnId].remove();
